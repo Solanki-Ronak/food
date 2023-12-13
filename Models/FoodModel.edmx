@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="FoodDataModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'F:\ASP.NET\MVC_BASEDFOODORDERINGSYSTEM\MVC_BASEDFOODORDERINGSYSTEM\APP_DATA\FOODDATA.MDF.dbo.TblContact' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="TblContact">
+          <Key>
+            <PropertyRef Name="fName" />
+            <PropertyRef Name="email" />
+            <PropertyRef Name="subject" />
+            <PropertyRef Name="message" />
+          </Key>
+          <Property Name="fName" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="email" Type="nvarchar" MaxLength="60" Nullable="false" />
+          <Property Name="subject" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="message" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'F:\ASP.NET\MVC_BASEDFOODORDERINGSYSTEM\MVC_BASEDFOODORDERINGSYSTEM\APP_DATA\FOODDATA.MDF.dbo.TblRegister' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="TblRegister">
+          <Key>
+            <PropertyRef Name="firstName" />
+            <PropertyRef Name="lastName" />
+            <PropertyRef Name="gender" />
+            <PropertyRef Name="emobile" />
+            <PropertyRef Name="pass" />
+          </Key>
+          <Property Name="firstName" Type="nvarchar" MaxLength="25" Nullable="false" />
+          <Property Name="lastName" Type="nvarchar" MaxLength="25" Nullable="false" />
+          <Property Name="gender" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="emobile" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="pass" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'F:\ASP.NET\MVC_BASEDFOODORDERINGSYSTEM\MVC_BASEDFOODORDERINGSYSTEM\APP_DATA\FOODDATA.MDF.dbo.TblRequest' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="TblRequest">
+          <Key>
+            <PropertyRef Name="uName" />
+            <PropertyRef Name="orderDate" />
+            <PropertyRef Name="foodCat" />
+            <PropertyRef Name="foodName" />
+            <PropertyRef Name="qty" />
+            <PropertyRef Name="description" />
+          </Key>
+          <Property Name="uName" Type="nvarchar" MaxLength="60" Nullable="false" />
+          <Property Name="orderDate" Type="datetime" Nullable="false" />
+          <Property Name="foodCat" Type="nvarchar" MaxLength="35" Nullable="false" />
+          <Property Name="foodName" Type="nvarchar" MaxLength="35" Nullable="false" />
+          <Property Name="qty" Type="int" Nullable="false" />
+          <Property Name="description" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="FoodDataModelStoreContainer">
+          <EntitySet Name="TblContact" EntityType="Self.TblContact" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[TblContact].[fName] AS [fName], 
+[TblContact].[email] AS [email], 
+[TblContact].[subject] AS [subject], 
+[TblContact].[message] AS [message]
+FROM [dbo].[TblContact] AS [TblContact]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="TblRegister" EntityType="Self.TblRegister" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[TblRegister].[firstName] AS [firstName], 
+[TblRegister].[lastName] AS [lastName], 
+[TblRegister].[gender] AS [gender], 
+[TblRegister].[emobile] AS [emobile], 
+[TblRegister].[pass] AS [pass]
+FROM [dbo].[TblRegister] AS [TblRegister]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="TblRequest" EntityType="Self.TblRequest" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[TblRequest].[uName] AS [uName], 
+[TblRequest].[orderDate] AS [orderDate], 
+[TblRequest].[foodCat] AS [foodCat], 
+[TblRequest].[foodName] AS [foodName], 
+[TblRequest].[qty] AS [qty], 
+[TblRequest].[description] AS [description]
+FROM [dbo].[TblRequest] AS [TblRequest]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="FoodDataModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="TblContact">
+          <Key>
+            <PropertyRef Name="fName" />
+            <PropertyRef Name="email" />
+            <PropertyRef Name="subject" />
+            <PropertyRef Name="message" />
+          </Key>
+          <Property Name="fName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="email" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="subject" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="message" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TblRegister">
+          <Key>
+            <PropertyRef Name="firstName" />
+            <PropertyRef Name="lastName" />
+            <PropertyRef Name="gender" />
+            <PropertyRef Name="emobile" />
+            <PropertyRef Name="pass" />
+          </Key>
+          <Property Name="firstName" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="lastName" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="gender" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="emobile" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="pass" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TblRequest">
+          <Key>
+            <PropertyRef Name="uName" />
+            <PropertyRef Name="orderDate" />
+            <PropertyRef Name="foodCat" />
+            <PropertyRef Name="foodName" />
+            <PropertyRef Name="qty" />
+            <PropertyRef Name="description" />
+          </Key>
+          <Property Name="uName" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="orderDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="foodCat" Type="String" MaxLength="35" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="foodName" Type="String" MaxLength="35" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="qty" Type="Int32" Nullable="false" />
+          <Property Name="description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="FoodDataEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="TblContacts" EntityType="Self.TblContact" />
+          <EntitySet Name="TblRegisters" EntityType="Self.TblRegister" />
+          <EntitySet Name="TblRequests" EntityType="Self.TblRequest" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="FoodDataModelStoreContainer" CdmEntityContainer="FoodDataEntities">
+          <EntitySetMapping Name="TblContacts">
+            <EntityTypeMapping TypeName="FoodDataModel.TblContact">
+              <MappingFragment StoreEntitySet="TblContact">
+                <ScalarProperty Name="fName" ColumnName="fName" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="subject" ColumnName="subject" />
+                <ScalarProperty Name="message" ColumnName="message" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblRegisters">
+            <EntityTypeMapping TypeName="FoodDataModel.TblRegister">
+              <MappingFragment StoreEntitySet="TblRegister">
+                <ScalarProperty Name="firstName" ColumnName="firstName" />
+                <ScalarProperty Name="lastName" ColumnName="lastName" />
+                <ScalarProperty Name="gender" ColumnName="gender" />
+                <ScalarProperty Name="emobile" ColumnName="emobile" />
+                <ScalarProperty Name="pass" ColumnName="pass" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblRequests">
+            <EntityTypeMapping TypeName="FoodDataModel.TblRequest">
+              <MappingFragment StoreEntitySet="TblRequest">
+                <ScalarProperty Name="uName" ColumnName="uName" />
+                <ScalarProperty Name="orderDate" ColumnName="orderDate" />
+                <ScalarProperty Name="foodCat" ColumnName="foodCat" />
+                <ScalarProperty Name="foodName" ColumnName="foodName" />
+                <ScalarProperty Name="qty" ColumnName="qty" />
+                <ScalarProperty Name="description" ColumnName="description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

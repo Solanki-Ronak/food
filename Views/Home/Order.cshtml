@@ -1,0 +1,94 @@
+﻿@model  MVC_BasedFoodOrderingSystem.Models.TblRequest
+@{
+    ViewBag.Title = "Order";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+<center style="background-color:aqua">
+    <br />
+    <br />
+
+
+    <div class="contact-wthree pt-lg-5 pt-4" id="contact">
+        <div class="container pt-md-5 pt-4">
+            <div class="text-center pb-4">
+                <span class="sub-title">Order Services</span>
+                <h4 class="w3pvt-title"></h4>
+            </div>
+
+            <div class="row py-lg-5 py-sm-4 pt-4">
+                <div class="col-12 mb-4">
+                    <div class="text-center">
+                        <h6 class="sub-title">send us a note</h6>
+                    </div>
+                    <!-- register form grid -->
+                    <div class="register-top1">
+                        <form action="#" method="post" class="register-wthree">
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>
+                                            Name
+                                        </label>
+                                        <a class="form-control">@Html.TextBoxFor(m => m.uName)</a>
+                                    </div>
+                                    <div class="col-md-6 mt-md-0 mt-4">
+                                        <label>
+                                            Order Date
+                                        </label>
+                                        <a class="form-control">@Html.TextBoxFor(m => m.orderDate)</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>
+                                            Food Category
+                                        </label>
+                                        <a class="form-control">@Html.TextBoxFor(m => m.foodCat)</a>
+                                    </div>
+                                    <div class="col-md-6 mt-md-0 mt-4">
+                                        <label>
+                                            Food Name
+                                        </label>
+                                        <a class="form-control">@Html.TextBoxFor(m => m.foodName)</a>
+                                    </div>
+                                    <div class="col-md-6 mt-md-0 mt-4">
+                                        <label>
+                                            Quantity
+                                        </label>
+                                        <a class="form-control">@Html.TextBoxFor(m => m.qty)</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <label>
+                                            Description
+                                        </label>
+                                        <a class="form-control">@Html.TextBoxFor(m => m.description)</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-md-12">
+                                    <input type="submit" id="btnConfirm" class="btn btn-w3layouts btn-block  bg-theme text-white w-100 font-weight-bold text-uppercase" value="Confirm Request" />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!--  //register form grid ends here -->
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <br />
+    <br />
+</center>
+

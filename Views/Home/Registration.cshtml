@@ -1,0 +1,64 @@
+﻿@model  MVC_BasedFoodOrderingSystem.Models.TblRegister
+@{
+    ViewBag.Title = "Registration";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+<center style="background-color:aqua">
+    <br />
+    <br />
+    @using (Html.BeginForm("Registration", "Home", FormMethod.Post))
+    {
+        <center>
+            <table border="3" bgcolor="Yellow" width="400px" height="250px">
+                <tr>
+                    <td colspan="2" align="center"><h2>Sig Up</h2></td>
+                </tr>
+                <tr>
+                    <td>Full Name</td>
+                    <td align="center">@Html.TextBoxFor(m => m.firstName, "{0:#.#}")</td>
+                </tr>
+                <tr>
+                    <td>last Name</td>
+                    <td align="center">@Html.TextBoxFor(m => m.lastName)</td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td align="center">@Html.TextBoxFor(m => m.gender)</td>
+                </tr>
+                <tr>
+                    <td>Mobile</td>
+                    <td align="center">@Html.TextBoxFor(m => m.emobile)</td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td align="center">@Html.TextBoxFor(m => m.pass)</td>
+                </tr>
+                <tr>
+                    <td>Confirm Password</td>
+                    <td align="center">@Html.TextBoxFor(m => m.pass)</td>
+                </tr>
+
+
+
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="submit" name="btrSubmit" value="Conform" bgcolor="Green" />
+                    </td>
+                </tr>
+            </table>
+        </center>
+    }
+    </div>
+    <b>@ViewBag.saveresult</b>
+</center>
+<script type="text/javascript">
+
+</script>
+
+
+
+<br />
+<br />
+</center>
+

@@ -1,0 +1,99 @@
+﻿@model  MVC_BasedFoodOrderingSystem.Models.TblContact
+
+@{
+    ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+<center style="background-color:aqua">
+    <br />
+    <br />
+    <br />
+
+    <div class="contact-wthree pt-lg-5 pt-4" id="contact">
+        <div class="container pt-md-5 pt-4">
+            <div class="text-center pb-4">
+                <span class="sub-title">Food Services</span>
+                <h4 class="w3pvt-title">contact us</h4>
+            </div>
+            <div class="col-12 contact-left-w3layouts pt-md-4">
+                <div class="w3layouts-contact-top text-center">
+                    <p>Sector 02, Main branch Head office, Bhavanagr City, India.</p>
+                    <p class="mt-2">
+
+                    </p>
+                </div>
+            </div>
+            <div class="row py-lg-5 py-sm-4 pt-4">
+                <div class="col-12 mb-4">
+                    <div class="text-center">
+                        <h6 class="sub-title">send us a note</h6>
+                    </div>
+                    <!-- register form grid -->
+                    <div class="register-top1">
+                        <form action="#" method="post" class="register-wthree">
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>
+                                            First name
+                                        </label>
+                                        <a class="form-control">@Html.TextBoxFor(m => m.fName)</a>
+                                    </div>
+                                    <div class="col-md-6 mt-md-0 mt-4">
+                                        <label>
+                                            Email Id
+                                        </label>
+                                        <a class="form-control">@Html.TextBoxFor(m => m.email)</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>
+                                            Subject
+                                        </label>
+                                        <a class="form-control">@Html.TextBoxFor(m => m.subject)</a>
+                                        required="">
+                                    </div>
+                                    <div class="col-md-6 mt-md-0 mt-4">
+                                        <label>
+
+                                        </label>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <label>
+                                            Your message
+                                        </label>
+                                        <a class="form-control">@Html.TextBoxFor(m => m.message)</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-md-12">
+                                    <input type="submit" class="btn btn-w3layouts btn-block  bg-theme text-white w-100 font-weight-bold text-uppercase" value="Send" />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!--  //register form grid ends here -->
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <br />
+
+    <br />
+    <br />
+</center>
+
